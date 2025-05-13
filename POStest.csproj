@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion> <!-- Specify the latest C# language version -->
+    <TargetFramework>net471</TargetFramework> <!-- Target .NET Framework 4.7.1 -->
+    <UseWPF>false</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings> <!-- Disable implicit usings as they are not available in .NET 4.7.1 -->
+    <PlatformTarget>AnyCPU</PlatformTarget> <!-- Ensure compatibility with both 32-bit and 64-bit OS -->
+    <ApplicationIcon>Resources\Pahook.ico</ApplicationIcon> <!-- Set the application icon -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="1.1.3" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="3.1.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Pahook.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
